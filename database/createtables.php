@@ -125,7 +125,7 @@ values
 (2,'42230100568','Md Mizanur Rahman'),
 (3,'42230100656','Arif Khan joy'),
 (4,'42230100557','Rafid Al Mahmud'),
-(5,'CSB21005','Asif hasan'),
+(5,'CSB21005','Asif hasan')
 ";
 
 $s = $dbo->conn->prepare($c);
@@ -138,7 +138,7 @@ try {
 $c = "insert into faculty_details
 (id,user_name,password,name)
 values
-(1,'tr','123','Tahsin Rahman'),
+(1,'tahsin','123','Tahsin Rahman'),
 (2,'sanjida','123','Sanjida Akter'),
 (3,'avishek','123','Avishek Das'),
 (4,'promit','123','Promit Biswas'),

@@ -15,11 +15,16 @@ function tryLogin()
                 //if you want to do something just
                 //before making the call
                 // alert("HELLO");
+                $("#diverror").removeClass("applyerrordiv");
+                $("#lockscreen").addClass("applylockscreen");
+                //$("#errormessage").text("");
+                
             },
             success:function(rv){
                 //if the ajax call was successful 
                 //result will be rv
                 // alert(JSON.stringify(rv));
+                $("#lockscreen").removeClass("applylockscreen");
                 if(rv['status']=="ALL OK")
                 {
                     document.location.replace("attendence.php");
@@ -27,7 +32,7 @@ function tryLogin()
                 else{
                     // alert(rv['status']);
                     $("#diverror").addClass("applyerrordiv");
-                    $("#errormessage").addClass("errormessage");
+                    $("#errormessage").text(rv['status']);
                 }
             },
             error:function(){
@@ -45,6 +50,8 @@ function tryLogin()
 $(function(e){
     //capture the keyupp event
     $(document).on("keyup","input",function(e){
+        $("#diverror").removeClass("applyerrordiv");
+        // $("#errormessage").text("");
         let un = $("#txtUsername").val();
         let pw = $("#txtPassword").val();
 

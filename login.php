@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/loader.css">
     <title>Login Page</title>
 </head>
 <body>
@@ -25,6 +26,11 @@
         <div class="diverror topmarginlarge" id="diverror">
             <label class="errormessage" id="errormessage">ERROR GOES HERE</label>
         </div>
+    </div>
+
+    <div class="lockscreen" id="lockscreen">
+        <div class="spinner" id="spinner"></div>
+        <lable class="lblwait topmargin" id="lblwait">PLEASE WAIT</lable>
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/login.js"></script>

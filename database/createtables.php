@@ -134,11 +134,31 @@ try {
 $c = "insert into student_details
 (id,roll_no,name)
 values
-(1,'42230100567','Md Emdadul Haque'),
-(2,'42230100568','Md Mizanur Rahman'),
-(3,'42230100656','Arif Khan joy'),
-(4,'42230100557','Rafid Al Mahmud'),
-(5,'42230100566','Asif hasan')
+(1,'42230100561','Md Emdadul Haque'),
+(2,'42230100562','Md Mizanur Rahman'),
+(3,'42230100563','Arif Khan joy'),
+(4,'42230100564','Rafid Al Mahmud'),
+(5,'42230100565','Asif hasan'),
+(6,'42230100566','Mahmudul Haque'),
+(7,'42230100567','Mahbub Hossain Rifat'),
+(8,'42230100568','Riad Hossain'),
+(9,'42230100569','Poly Rasel'),
+(10,'42230100570','Nazmul hasan papon'),
+(11,'42230100571','Shahriar sumon'),
+(12,'42230100572','Hafiz rahman'),
+(13,'42230100573','Nayem miah'),
+(14,'42230100574','Mozammel haque'),
+(15,'42230100575','Sakib AL Hasan'),
+(16,'42230100576','Farzana akhter'),
+(17,'42230100577','Nadim Mahmud'),
+(18,'42230100578','Ummul Oara'),
+(19,'42230100579','Arafat nayem'),
+(20,'42230100580','Abu Rayhan'),
+(21,'42230100581','Johirul islam'),
+(22,'42230100582','Nahida sultana'),
+(23,'42230100583','Zahid Hossain'),
+(24,'42230100584','Md Uzzal'),
+(25,'42230100585','Aminur Atik')
 ";
 
 $s = $dbo->conn->prepare($c);
@@ -208,7 +228,7 @@ $c = "insert into course_registration(student_id,course_id,session_id)
 //iterate all over the 5 students
 //for each of them choose 3 random course from 1 to 6
 
-for($i=1;$i<=5;$i++)
+for($i=1;$i<=25;$i++)
 {
     for($j=0;$j<3;$j++)
     {

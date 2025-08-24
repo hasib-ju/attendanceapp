@@ -23,7 +23,7 @@ if(!empty($action))
             $_SESSION['current_user']=$rv['id'];
         }
 
-        for($i=0;$i<100000;$i++)
+        for($i=0;$i<10000;$i++)
         {
             for($j=0;$j<10000;$j++)
             {

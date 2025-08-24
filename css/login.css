@@ -125,3 +125,20 @@ body{
 .activecolor{
     background-color: rgb(50, 168, 247);
 }
+.diverror{
+    background-color: brown;
+    color: white;
+    height: 45px;
+    width: 85%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.applyerrordiv{
+    visibility: visible;
+    opacity: 1;
+}

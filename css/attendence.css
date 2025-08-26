@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --fontsize:1rem;
+    --gap:.3rem;
+    --padding:.4rem;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page{
+    border: solid 1px black;
+    width: min(1200px,95%);
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header-area"
+    "session-area"
+    "classlist-area"
+    "classdetails-area"
+    "studentlist-area"
+    ;
+}
+
+.header-area{
+    grid-area: header-area;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-areas: "logo-area logout-area";
+    border: solid 1px black;/* temporary just to view*/
+    gap:var(--gap); 
+    padding: var(--padding);
+}
+.logo-area{
+    grid-area: logo-area;
+    border: solid 1px rgb(187, 17, 17);/*temporary just to view*/
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logout-area{
+    grid-area: logout-area;
+    border: solid 1px rgb(187, 17, 17);/*temporary just to view*/
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.session-area{
+    grid-area: session-area;
+    background-color: rgb(232, 197, 227);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
+    grid-template-areas: "label-area"
+    "dropdown-area";
+    gap:var(--gap);
+    padding: var(--padding);
+}
+
+.label-area{
+    grid-area: label-area;
+    font-size: calc(var(--fontsize)*.8);
+    padding-left: calc(var(--padding)*6);
+}
+.dropdown-area{
+    grid-area: dropdown-area;
+    font-size: calc(var(--fontsize)*1);
+}
+.classlist-area{
+    grid-area: classlist-area;
+    background-color: rgb(132, 165, 32);
+    display: flex;
+    flex-wrap: wrap;
+}
+.classdetails-area{
+    grid-area: classdetails-area;
+    background-color: rgb(53, 53, 119);
+}
+.studentlist-area{
+    grid-area: studentlist-area;
+    background-color: rgb(214, 118, 50);
+    /*dummy colors just to view*/
+}
+
+.btnlogout{
+        font-size: var(--fontsize);
+        width: 5em;
+        padding: var(--padding);
+        background-color: rgb(69, 69, 211);
+        color: white;
+        border: solid 1px rgb(69, 69, 211);
+        border-radius: .1em;
+}
+
+.ddlclass{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: solid 1px blue;
+}

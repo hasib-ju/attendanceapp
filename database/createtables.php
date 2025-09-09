@@ -33,8 +33,8 @@ catch(PDOException $o){
 $c = "create table course_details(
 
     id int auto_increment primary key,
-    code varchar(20) unique,
-    title varchar(20),
+    code varchar(25) unique,
+    title varchar(25),
     credit int
 )";
 $s = $dbo->conn->prepare($c);
@@ -175,8 +175,8 @@ values
 (2,'sanjida','123','Sanjida Akter'),
 (3,'avishek','123','Avishek Das'),
 (4,'promit','123','Promit Biswas'),
-(5,'mriganka','123','Mriganka Sekhar'),
-(6,'manooj','123','Manooj Hazarika')";
+(5,'sezan','123','sezan Mahmud saikat'),
+(6,'doha','123','Md samsudoha alam')";
 
 $s = $dbo->conn->prepare($c);
 try {
